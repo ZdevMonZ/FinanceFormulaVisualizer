@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Finance Formula Visualizer</title>
+<title>Finance Dashboard</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <style>
@@ -16,10 +16,17 @@ label{display:block;margin-bottom:6px;font-weight:600}
 .value{font-weight:400;margin-left:10px;color:#4f6df5}
 input[type=range]{width:100%}
 .result{margin-top:20px;font-size:24px;text-align:center;font-weight:bold;color:#16a34a}
+.nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}
+.button{padding:10px 16px;background:#4f6df5;color:white;border:none;border-radius:10px;cursor:pointer;text-decoration:none}
 </style>
 </head>
 <body>
 <div class="container">
+
+<div class="nav">
+<h1>Finance Visualizer</h1>
+<a href="npv.html" class="button">Multiple Cash Flow Tool →</a>
+</div>
 
 <div class="card">
 <h2>Time Value of Money Formula</h2>
@@ -82,7 +89,6 @@ for(let i=0;i<=years;i++){
  labels.push("Year "+i)
 }
 
-// 마지막 값 = 최종 미래가치
 const finalValue=values[values.length-1]
 document.getElementById('result').textContent =
  "미래 가치 (FV): $" + formatNumber(finalValue)
