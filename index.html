@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-  <title>Mini Games Web Platform Mockup</title>
+  <title>제페토 월드 플랫폼 - Mockup</title>
   <style>
     * {
       box-sizing: border-box;
@@ -300,7 +300,28 @@
       box-shadow: 0 0 12px rgba(237,194,46,0.7);
     }
     .thumb-brick {
-      background: linear-gradient(135deg, #A8E6CF, #4FB286);
+      background: linear-gradient(145deg, #080018 0%, #120028 100%);
+      overflow: hidden;
+    }
+    .brick-scene {
+      display: flex; flex-direction: column;
+      align-items: center; gap: 5px; width: 100%;
+    }
+    .brick-rows { display: flex; flex-direction: column; gap: 4px; width: 118px; }
+    .brick-row  { display: flex; gap: 4px; }
+    .br { flex: 1; height: 11px; border-radius: 3px; }
+    .br-r { background: #FF5252; box-shadow: 0 0 4px rgba(255,82,82,0.6); }
+    .br-o { background: #FFA726; box-shadow: 0 0 4px rgba(255,167,38,0.5); }
+    .br-y { background: #FFEE58; box-shadow: 0 0 4px rgba(255,238,88,0.5); }
+    .brick-ball {
+      font-size: 14px; color: #fff;
+      text-shadow: 0 0 8px rgba(255,255,255,0.9);
+      align-self: flex-end; margin-right: 18px;
+    }
+    .brick-paddle {
+      width: 58px; height: 8px;
+      background: linear-gradient(90deg, #90CAF9, #E0F0FF);
+      border-radius: 4px; box-shadow: 0 0 10px rgba(136,204,255,0.7);
     }
     .thumb-bubble {
       background: linear-gradient(135deg, #FFAFBD, #FFC371);
@@ -426,6 +447,23 @@
         <div class="meta"><span>👍 93%</span><span>👤 1.4M</span></div>
       </div>
 
+      <div class="game-card" onclick="window.location.href='games/breakout.html'">
+        <div class="thumb thumb-brick">
+          <span class="badge new">NEW</span>
+          <div class="brick-scene">
+            <div class="brick-rows">
+              <div class="brick-row"><div class="br br-r"></div><div class="br br-r"></div><div class="br br-r"></div></div>
+              <div class="brick-row"><div class="br br-o"></div><div class="br br-o"></div><div class="br br-o"></div></div>
+              <div class="brick-row"><div class="br br-y"></div><div class="br br-y"></div><div class="br br-y"></div></div>
+            </div>
+            <div class="brick-ball">⚪</div>
+            <div class="brick-paddle"></div>
+          </div>
+        </div>
+        <div class="title">Brick Smash</div>
+        <div class="meta"><span>👍 91%</span><span>👤 1.2M</span></div>
+      </div>
+
       <div class="game-card" onclick="window.location.href='games/2048.html'">
         <div class="thumb thumb-2048">
           <div class="tile-preview">
@@ -471,17 +509,6 @@
         </div>
         <div class="title">Block Drop</div>
         <div class="meta"><span>👍 93%</span><span>👤 1.8M</span></div>
-      </div>
-
-      <div class="game-card">
-        <div class="thumb thumb-brick">
-          <div class="thumb-content">
-            <div class="thumb-icon">🧱</div>
-            <div class="thumb-label">BREAKER</div>
-          </div>
-        </div>
-        <div class="title">Brick Smash</div>
-        <div class="meta"><span>👍 87%</span><span>👤 680K</span></div>
       </div>
 
       <div class="game-card">
