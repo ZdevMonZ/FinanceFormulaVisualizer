@@ -1,2 +1,2 @@
-# FinanceFormulaVisualizer
-For MBA Class
+# MiniGames by Jennifer
+- Enjoy!
